@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Golden Africa - Services professionnels de nettoyage, jardinage, garde et bricolage à Tétouan">
+    <title>Golden Africa - Services Professionnels</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Styles généraux */
+        :root {
+            --primary-color: #004aad; /* Bleu */
+            --secondary-color: #ffd700; /* Or */
+            --accent-color: #ff6b6b; /* Rouge pour les accents */
+            --text-color: #333; /* Gris foncé */
+            --light-color: #fff; /* Blanc */
+            --background-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --section-padding: 3rem 1.5rem;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--background-gradient);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+        }
+
+        body.rtl {
+            direction: rtl;
+            text-align: right;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 5000px;
+            margin: 0 auto;
+            padding: 0 10px;
+            width: 100%;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            animation: fadeIn 1s ease;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container img {
+            max-width: 100px;
+            height: auto;
+            animation: bounce 2s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .language-switcher {
+            position: relative;
+            z-index: 100;
+        }
+
+        .language-switcher select {
+            padding: 0.5rem;
+            border: 1px solid var(--primary-color);
+            border-radius: 4px;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            font-family: 'Poppins', Arial, sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .language-switcher select:hover {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        nav {
+            width: 100%;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 0.5rem;
+            transition: var(--transition);
+            border-radius: 4px;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        main {
+            margin-top: 140px;
+            padding-bottom: 2rem;
+        }
+
+        html {
+            scroll-padding-top: 140px;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.95);
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: var(--section-padding);
+            animation: fadeInUp 0.8s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-item {
+            background-color: var(--light-color);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-item i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            transition: transform 0.3s ease, color 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .service-item:hover i {
+            transform: scale(1.2) rotate(10deg);
+            color: var(--accent-color);
+        }
+
+        .service-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        #about p, #team p {
+            max-width: 800px;
+            margin: 0 auto 1rem;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .testimonials-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .testimonial-card {
+            background-color: var(--light-color);
+            border-left: 4px solid var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 3rem;
+            color: rgba(0, 74, 173, 0.1);
+            font-family: serif;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        label {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        input, select, textarea {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 74, 173, 0.2);
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0, 74, 173, 0.3);
+        }
+
+        button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #confirmationMessage {
+            background-color: #dff0d8;
+            color: #3c763d;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 1rem;
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+
+        .contact-item a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .social-links a:hover {
+            color: var(--light-color);
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        #download {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh;
+        }
+
+        .download-card {
+            background-color: var(--light-color);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .download-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .download-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 74, 173, 0.3);
+        }
+
+        .download-button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 200px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+            filter: brightness(0.8);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #backToTop.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #backToTop:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Menu hamburger pour mobile */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            cursor: pointer;
+            z-index: 1010;
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        /* Animation des barres du menu mobile */
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                justify-content: space-between;
+            }
+            
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(255, 255, 255, 0.98);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                margin-top: 0;
+            }
+            
+            nav.active {
+                transform: translateX(0);
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            main {
+                margin-top: 100px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .logo-container img {
+                width: 80px;
+            }
+        }
+
+        /* Correction de marquee */
+        .brand-name {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: scrollText 10s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes scrollText {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        /* Animation de chargement de page */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s;
+        }
+
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <img src="https://assets.onecompiler.app/43a2924tf/43axpk656/ri_3.png" alt="Golden Africa Logo">
+                <h1><span class="brand-name">Golden Africa S.A.R.L</span></h1>
+            </div>
+            
+            <div class="language-switcher">
+                <select id="languageSelect">
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </div>
+            
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#services"><i class="fas fa-briefcase"></i> <span data-lang="services">Services</span></a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> <span data-lang="about">À Propos</span></a></li>
+                    <li><a href="#team"><i class="fas fa-users"></i> <span data-lang="team">Notre Équipe</span></a></li>
+                    <li><a href="#testimonials"><i class="fas fa-comment-dots"></i> <span data-lang="testimonials">Avis</span></a></li>
+                    <li><a href="#devis"><i class="fas fa-file-invoice"></i> <span data-lang="devis">Demande de devis</span></a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> <span data-lang="contact">Contact</span></a></li>
+                    <li><a href="#download"><i class="fas fa-download"></i> <span data-lang="downloadApp">Télécharger</span></a></li>
+                    <li><a href="#gallery"><i class="fas fa-images"></i> <span data-lang="gallery">Galerie</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="services">
+            <h2 data-lang="services">Nos Services</h2>
+            <p data-lang="servicesDescription">Des services professionnels adaptés à tous vos besoins</p>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-broom"></i>
+                    <h3 data-lang="cleaning">Nettoyage</h3>
+                    <p data-lang="cleaningDescription">Service professionnel pour particuliers et entreprises. Nettoyage régulier ou ponctuel selon vos besoins.</p>
+                </div>
+                
+                <div class="service-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3 data-lang="gardening">Jardinage</h3>
+                    <p data-lang="gardeningDescription">Entretien et aménagement d'espaces verts. Tonte, taille, plantation et conception paysagère.</p>
+                </div>
+                
+                <div class="service-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3 data-lang="guarding">Garde</h3>
+                    <p data-lang="guardingDescription">Sécurité et surveillance de biens et personnes. Personnel qualifié et fiable disponible 24h/24.</p>
+                </div>
+                
+                <div class="service-item">
+                    <i class="fas fa-tools"></i>
+                    <h3 data-lang="handyman">Bricolage</h3>
+                    <p data-lang="handymanDescription">Petits travaux de réparation et maintenance. Montage de meubles, peinture, électricité, plomberie.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <h2 data-lang="about">À Propos de Golden Africa</h2>
+            <p data-lang="aboutDescription1">Golden Africa est une société fondée avec une mission claire : offrir des services de qualité exceptionnelle adaptés aux besoins spécifiques de chaque client. Spécialisés dans les domaines du nettoyage, jardinage, garde et bricolage, nous combinons expertise technique et service personnalisé pour garantir votre satisfaction.</p>
+            <p data-lang="aboutDescription2">Notre engagement envers l'excellence et notre approche centrée sur le client nous distinguent dans le secteur des services. Chaque intervention est réalisée avec le plus grand soin, en respectant vos exigences et votre environnement.</p>
+        </section>
+        
+        <section id="team">
+            <h2 data-lang="team">Notre Équipe de Professionnels</h2>
+            <p data-lang="teamDescription1">Chez Golden Africa, nous sélectionnons rigoureusement nos collaborateurs pour leur expertise, leur sérieux et leur sens du service. Chaque membre de notre équipe est formé aux meilleures pratiques de son domaine et partage nos valeurs d'excellence, de ponctualité et de respect.</p>
+            <p data-lang="teamDescription2">Nos professionnels sont régulièrement formés aux nouvelles techniques et équipements pour vous garantir un service toujours à la pointe. Leur savoir-faire et leur disponibilité font la différence dans chacune de nos interventions.</p>
+        </section>
+        
+        <section id="testimonials">
+            <h2 data-lang="testimonials">Témoignages de Nos Clients</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <p data-lang="testimonial1">"Le service de nettoyage de Golden Africa a transformé mon appartement. Leur équipe est professionnelle, minutieuse et respectueuse. Je recommande vivement leurs services à quiconque recherche un nettoyage de qualité."</p>
+                    <p><strong data-lang="testimonial1Author">- Mme Laila B., Tétouan</strong></p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p data-lang="testimonial2">"Nous faisons appel à Golden Africa pour l'entretien de nos espaces verts depuis plus d'un an. Leur équipe de jardiniers est compétente et créative. Notre jardin n'a jamais été aussi beau !"</p>
+                    <p><strong data-lang="testimonial2Author">- M. Karim M., Propriétaire de villa</strong></p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p data-lang="testimonial3">"En tant que gérant d'immeuble, j'apprécie particulièrement la fiabilité et le professionnalisme du service de garde de Golden Africa. Leur personnel est vigilant, courtois et parfaitement formé."</p>
+                    <p><strong data-lang="testimonial3Author">- M. Hassan T., Syndic de copropriété</strong></p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Demande de Devis -->
+        <section id="devis">
+            <h2 data-lang="devis">Demande de Devis</h2>
+            <form id="devisForm" action="sendEmail.php" method="post">
+                <div class="form-group">
+                    <label for="name" data-lang="fullName">Nom complet :</label>
+                    <input type="text" id="name" name="name" required placeholder="Votre nom et prénom">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" data-lang="email">Email :</label>
+                    <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" data-lang="phone">Téléphone :</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="0xxxxxxxxx">
+                </div>
+                
+                <div class="form-group">
+                    <label for="service" data-lang="service">Service souhaité :</label>
+                    <select id="service" name="service" required>
+                        <option value="">Sélectionnez un service</option>
+                        <option value="nettoyage" data-lang="cleaning">Nettoyage</option>
+                        <option value="jardinage" data-lang="gardening">Jardinage</option>
+                        <option value="garde" data-lang="guarding">Garde</option>
+                        <option value="bricolage" data-lang="handyman">Bricolage</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" data-lang="message">Détails du projet :</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Décrivez votre projet..."></textarea>
+                </div>
+                
+                <button type="submit" data-lang="submit">Demander un devis</button>
+            </form>
+            <div id="confirmationMessage">
+                <i class="fas fa-check-circle"></i> <span data-lang="confirmationMessage">Votre demande de devis a été envoyée avec succès ! Nous vous contacterons dans les plus brefs délais.</span>
+            </div>
+        </section>
+        
+        <!-- Section Téléchargement de l'application -->
+        <section id="download">
+            <div class="download-card">
+                <i class="fas fa-mobile-alt fa-4x"></i>
+                <h2 data-lang="downloadApp">Téléchargez notre application</h2>
+                <p data-lang="downloadAppDescription">Accédez à nos services en un clic. Disponible sur Android.</p>
+                <a href="https://www.raed.net/file?id=1235566" class="download-button" data-lang="downloadButton">Télécharger l'APK</a>
+            </div>
+        </section>
+
+        <!-- Section Galerie de Photos -->
+        <section id="gallery">
+            <h2 data-lang="gallery">Galerie de Photos</h2>
+            <div class="gallery">
+                <img src="photo1.jpg" alt="Photo 1" loading="lazy">
+                <img src="photo2.jpg" alt="Photo 2" loading="lazy">
+                <img src="photo3.jpg" alt="Photo 3" loading="lazy">
+                <img src="photo4.jpg" alt="Photo 4" loading="lazy">
+                <img src="photo5.jpg" alt="Photo 5" loading="lazy">
+                <img src="photo6.jpg" alt="Photo 6" loading="lazy">
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2 data-lang="contact">Contactez-Nous</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p><a href="tel:+212669649448">+212669649448</a></p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p><a href="mailto:mef.omar81@gmail.com">mef.omar81@gmail.com</a></p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p data-lang="address">Avenue Mohamed Bennouna, Tétouan, Maroc</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <p data-lang="workingHours">Lun-Ven: 8h-18h | Sam: 9h-13h</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/0669649448" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Golden Africa - <span data-lang="rights">Tous droits réservés</span></p>
+        </div>
+    </footer>
+    
+    <script>
+        // Masquer le page-loader une fois la page chargée
+        window.addEventListener('load', function () {
+            const pageLoader = document.querySelector('.page-loader');
+            if (pageLoader) {
+                pageLoader.classList.add('fade-out');
+                setTimeout(() => {
+                    pageLoader.remove();
+                }, 500);
+            }
+        });
+
+        // Activer le smooth scroll pour les liens d'ancrage
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Gestion du formulaire de demande de devis
+        document.getElementById("devisForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            // Désactiver le bouton pendant l'envoi
+            const submitButton = this.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span data-lang="sending">Envoi en cours...</span>';
+            
+            // Collecter les données du formulaire
+            const formData = new FormData(this);
+            
+            // Envoyer les données au serveur
+            fetch("sendEmail.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Problème avec la requête');
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Afficher le message de confirmation
+                document.getElementById("confirmationMessage").style.display = "block";
+                
+                // Réinitialiser le formulaire
+                this.reset();
+                
+                // Faire défiler jusqu'au message de confirmation
+                document.getElementById("confirmationMessage").scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Réinitialiser le bouton
+                submitButton.disabled = false;
+                submitButton.innerHTML = '<span data-lang="submit">Demander un devis</span>';
+                
+                // Cacher le message après 5 secondes
+                setTimeout(() => {
+                    document.getElementById("confirmationMessage").style.display = "none";
+                }, 5000);
+            })
+            .catch(error => {
+                // Message d'erreur amélioré en français
+                alert("Désolé, nous n'avons pas pu envoyer votre demande de devis. Veuillez vérifier votre connexion internet et réessayer. Si le problème persiste, veuillez nous contacter par téléphone au +212669649448.");
+                console.error('Erreur:', error);
+                
+                // Réinitialiser le bouton
+                submitButton.disabled = false;
+                submitButton.innerHTML = '<span data-lang="submit">Demander un devis</span>';
+            });
+        });
+        
+        // Gestion du changement de langue
+        const translations = {
+            fr: {
+                services: "Services",
+                about: "À Propos",
+                team: "Notre Équipe",
+                testimonials: "Avis",
+                devis: "Demande de Devis",
+                contact: "Contact",
+                servicesDescription: "Des services professionnels adaptés à tous vos besoins",
+                cleaning: "Nettoyage",
+                cleaningDescription: "Service professionnel pour particuliers et entreprises. Nettoyage régulier ou ponctuel selon vos besoins.",
+                gardening: "Jardinage",
+                gardeningDescription: "Entretien et aménagement d'espaces verts. Tonte, taille, plantation et conception paysagère.",
+                guarding: "Garde",
+                guardingDescription: "Sécurité et surveillance de biens et personnes. Personnel qualifié et fiable disponible 24h/24.",
+                handyman: "Bricolage",
+                handymanDescription: "Petits travaux de réparation et maintenance. Montage de meubles, peinture, électricité, plomberie.",
+                aboutDescription1: "Golden Africa est une société fondée avec une mission claire : offrir des services de qualité exceptionnelle adaptés aux besoins spécifiques de chaque client. Spécialisés dans les domaines du nettoyage, jardinage, garde et bricolage, nous combinons expertise technique et service personnalisé pour garantir votre satisfaction.",
+                aboutDescription2: "Notre engagement envers l'excellence et notre approche centrée sur le client nous distinguent dans le secteur des services. Chaque intervention est réalisée avec le plus grand soin, en respectant vos exigences et votre environnement.",
+                teamDescription1: "Chez Golden Africa, nous sélectionnons rigoureusement nos collaborateurs pour leur expertise, leur sérieux et leur sens du service. Chaque membre de notre équipe est formé aux meilleures pratiques de son domaine et partage nos valeurs d'excellence, de ponctualité et de respect.",
+                teamDescription2: "Nos professionnels sont régulièrement formés aux nouvelles techniques et équipements pour vous garantir un service toujours à la pointe. Leur savoir-faire et leur disponibilité font la différence dans chacune de nos interventions.",
+                testimonial1: "Le service de nettoyage de Golden Africa a transformé mon appartement. Leur équipe est professionnelle, minutieuse et respectueuse. Je recommande vivement leurs services à quiconque recherche un nettoyage de qualité.",
+                testimonial1Author: "- Mme Laila B., Tétouan",
+                testimonial2: "Nous faisons appel à Golden Africa pour l'entretien de nos espaces verts depuis plus d'un an. Leur équipe de jardiniers est compétente et créative. Notre jardin n'a jamais été aussi beau !",
+                testimonial2Author: "- M. Karim M., Propriétaire de villa",
+                testimonial3: "En tant que gérant d'immeuble, j'apprécie particulièrement la fiabilité et le professionnalisme du service de garde de Golden Africa. Leur personnel est vigilant, courtois et parfaitement formé.",
+                testimonial3Author: "- M. Hassan T., Syndic de copropriété",
+                fullName: "Nom complet :",
+                email: "Email :",
+                phone: "Téléphone :",
+                service: "Service souhaité :",
+                message: "Détails du projet :",
+                submit: "Demander un devis",
+                confirmationMessage: "Votre demande de devis a été envoyée avec succès ! Nous vous contacterons dans les plus brefs délais.",
+                address: "Avenue Mohamed Bennouna, Tétouan, Maroc",
+                workingHours: "Lun-Ven: 8h-18h | Sam: 9h-13h",
+                rights: "Tous droits réservés",
+                sending: "Envoi en cours...",
+                downloadApp: "Télécharger l'Application",
+                downloadAppDescription: "Accédez à nos services en un clic. Disponible sur Android.",
+                downloadButton: "Télécharger l'APK",
+                gallery: "Galerie de Photos"
+            },
+            en: {
+                services: "Services",
+                about: "About",
+                team: "Our Team",
+                testimonials: "Testimonials",
+                devis: "Request a Quote",
+                contact: "Contact",
+                servicesDescription: "Professional services tailored to all your needs",
+                cleaning: "Cleaning",
+                cleaningDescription: "Professional service for individuals and businesses. Regular or one-time cleaning according to your needs.",
+                gardening: "Gardening",
+                gardeningDescription: "Maintenance and landscaping of green spaces. Mowing, pruning, planting, and landscape design.",
+                guarding: "Guarding",
+                guardingDescription: "Security and surveillance of property and people. Qualified and reliable staff available 24/7.",
+                handyman: "Handyman",
+                handymanDescription: "Small repair and maintenance work. Furniture assembly, painting, electricity, plumbing.",
+                aboutDescription1: "Golden Africa is a company founded with a clear mission: to provide exceptional quality services tailored to the specific needs of each client. Specializing in cleaning, gardening, guarding, and handyman services, we combine technical expertise and personalized service to ensure your satisfaction.",
+                aboutDescription2: "Our commitment to excellence and our client-centered approach set us apart in the service sector. Each intervention is carried out with the utmost care, respecting your requirements and your environment.",
+                teamDescription1: "At Golden Africa, we rigorously select our collaborators for their expertise, seriousness, and sense of service. Each member of our team is trained in the best practices of their field and shares our values of excellence, punctuality, and respect.",
+                teamDescription2: "Our professionals are regularly trained in new techniques and equipment to guarantee you a service that is always at the cutting edge. Their know-how and availability make the difference in each of our interventions.",
+                testimonial1: "Golden Africa's cleaning service has transformed my apartment. Their team is professional, meticulous, and respectful. I highly recommend their services to anyone looking for quality cleaning.",
+                testimonial1Author: "- Mrs. Laila B., Tetouan",
+                testimonial2: "We have been using Golden Africa for the maintenance of our green spaces for over a year. Their team of gardeners is competent and creative. Our garden has never looked so beautiful!",
+                testimonial2Author: "- Mr. Karim M., Villa Owner",
+                testimonial3: "As a building manager, I particularly appreciate the reliability and professionalism of Golden Africa's guarding service. Their staff is vigilant, courteous, and perfectly trained.",
+                testimonial3Author: "- Mr. Hassan T., Condominium Manager",
+                fullName: "Full Name :",
+                email: "Email :",
+                phone: "Phone :",
+                service: "Desired Service :",
+                message: "Project Details :",
+                submit: "Request a Quote",
+                confirmationMessage: "Your quote request has been successfully sent! We will contact you shortly.",
+                address: "Avenue Mohamed Bennouna, Tetouan, Morocco",
+                workingHours: "Mon-Fri: 8am-6pm | Sat: 9am-1pm",
+                rights: "All rights reserved",
+                sending: "Sending...",
+                downloadApp: "Download the App",
+                downloadAppDescription: "Access our services with one click. Available on Android.",
+                downloadButton: "Download APK",
+                gallery: "Photo Gallery"
+            },
+            ar: {
+                services: "الخدمات",
+                about: "معلومات عنا",
+                team: "فريقنا",
+                testimonials: "شهادات",
+                devis: "طلب عرض سعر",
+                contact: "اتصل بنا",
+                servicesDescription: "خدمات احترافية مصممة لتناسب جميع احتياجاتك",
+                cleaning: "تنظيف",
+                cleaningDescription: "خدمة احترافية للأفراد والشركات. تنظيف منتظم أو لمرة واحدة حسب احتياجاتك.",
+                gardening: "بستنة",
+                gardeningDescription: "صيانة وتنسيق المساحات الخضراء. قص، تقليم، زراعة وتصميم المناظر الطبيعية.",
+                guarding: "حراسة",
+                guardingDescription: "الأمن والمراقبة للممتلكات والأشخاص. طاقم مؤهل وموثوق متاح 24/7.",
+                handyman: "سباكة ونجارة",
+                handymanDescription: "أعمال صيانة وإصلاح صغيرة. تركيب الأثاث، طلاء، كهرباء، سباكة.",
+                aboutDescription1: "Golden Africa هي شركة تأسست بمهمة واضحة: تقديم خدمات ذات جودة استثنائية مصممة خصيصًا لاحتياجات كل عميل. متخصصون في مجالات التنظيف، البستنة، الحراسة والسباكة والنجارة، نجمع بين الخبرة الفنية والخدمة الشخصية لضمان رضاك.",
+                aboutDescription2: "التزامنا بالتميز ونهجنا المرتكز على العميل يميزنا في قطاع الخدمات. يتم تنفيذ كل تدخل بأقصى درجات العناية، مع مراعاة متطلباتك وبيئتك.",
+                teamDescription1: "في Golden Africa، نختار بعناية متعاونينا لخبراتهم، جديتهم وحس الخدمة. يتم تدريب كل عضو في فريقنا على أفضل الممارسات في مجاله ويشاركنا قيم التميز، الالتزام بالمواعيد والاحترام.",
+                teamDescription2: "يتم تدريب محترفينا بانتظام على التقنيات والمعدات الجديدة لضمان خدمة دائمًا في الطليعة. معرفتهم وتوفرهم يحدثان الفرق في كل تدخل لدينا.",
+                testimonial1: "خدمة تنظيف Golden Africa غيرت شقتي. فريقهم محترف، دقيق ومحترم. أوصي بشدة بخدماتهم لأي شخص يبحث عن تنظيف عالي الجودة.",
+                testimonial1Author: "- السيدة ليلى ب., تطوان",
+                testimonial2: "نحن نستخدم Golden Africa لصيانة مساحاتنا الخضراء منذ أكثر من عام. فريق البستنة لديهم كفء ومبدع. حديقتنا لم تكن أبدًا بهذا الجمال!",
+                testimonial2Author: "- السيد كريم م., مالك فيلا",
+                testimonial3: "كمدير مبنى، أقدر بشكل خاص موثوقية واحترافية خدمة الحراسة في Golden Africa. طاقمهم يقظ، مهذب ومدرب بشكل مثالي.",
+                testimonial3Author: "- السيد حسن ت., مدير مجمع سكني",
+                fullName: "الاسم الكامل :",
+                email: "البريد الإلكتروني :",
+                phone: "الهاتف :",
+                service: "الخدمة المطلوبة :",
+                message: "تفاصيل المشروع :",
+                submit: "طلب عرض سعر",
+                confirmationMessage: "تم إرسال طلب عرض السعر بنجاح! سنتواصل معك قريبًا.",
+                address: "شارع محمد بنونة، تطوان، المغرب",
+                workingHours: "الإثنين-الجمعة: 8 صباحًا - 6 مساءً | السبت: 9 صباحًا - 1 ظهرًا",
+                rights: "جميع الحقوق محفوظة",
+                sending: "جارٍ الإرسال...",
+                downloadApp: "تنزيل التطبيق",
+                downloadAppDescription: "قم بتنزيل تطبيقنا للهاتف المحمول للوصول إلى خدماتنا بسهولة أكبر.",
+                downloadButton: "تنزيل APK",
+                gallery: "معرض الصور"
+            }
+        };
+
+        const languageSelect = document.getElementById('languageSelect');
+        const elementsToTranslate = document.querySelectorAll('[data-lang]');
+
+        function updateLanguage() {
+            const selectedLanguage = languageSelect.value;
+            elementsToTranslate.forEach(element => {
+                const key = element.getAttribute('data-lang');
+                element.textContent = translations[selectedLanguage][key];
+            });
+
+            // Gérer la direction du texte pour l'arabe
+            if (selectedLanguage === 'ar') {
+                document.body.classList.add('rtl');
+            } else {
+                document.body.classList.remove('rtl');
+            }
+        }
+
+        languageSelect.addEventListener('change', updateLanguage);
+
+        // Initialiser la langue par défaut
+        updateLanguage();
+
+        // Gestion du menu mobile
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.getElementById('mainNav');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+
+        // Fermer le menu lorsqu'on clique en dehors
+        document.addEventListener('click', function(event) {
+            if (!mainNav.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                mainNav.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
